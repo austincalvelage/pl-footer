@@ -1,36 +1,40 @@
 function opacity() {
   const scale = Array(21)
     .fill(null)
-    .map((_, i) => [i * 5, Math.round(i * 0.05 * 100) / 100])
-  const values = Object.fromEntries(scale)
-  return values
+    .map((_, i) => [i * 5, Math.round(i * 0.05 * 100) / 100]);
+  const values = Object.fromEntries(scale);
+  return values;
 }
 
 function spacing() {
   const scale = Array(101)
     .fill(null)
-    .map((_, i) => [i * 0.5, `${i * 0.5 * 8}px`])
-  const values = Object.fromEntries(scale)
-  values.px = '1px'
-  values.xs = '2px'
-  values.sm = '4px'
-  values.md = '6px'
-  values.screen = '100vh'
-  return values
+    .map((_, i) => [i * 0.5, `${i * 0.5 * 8}px`]);
+  const values = Object.fromEntries(scale);
+  values.px = '1px';
+  values.xs = '2px';
+  values.sm = '4px';
+  values.md = '6px';
+  values.screen = '100vh';
+  return values;
 }
 
 function zIndex() {
   const scale = Array(11)
     .fill(null)
-    .map((_, i) => [i * 1, `${i * 1}`])
-  const values = Object.fromEntries(scale)
-  values.top = '999999'
-  return values
+    .map((_, i) => [i * 1, `${i * 1}`]);
+  const values = Object.fromEntries(scale);
+  values.top = '999999';
+  return values;
 }
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './public/**/*.svg'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './public/**/*.svg',
+  ],
   darkMode: 'class',
   theme: {
     /*/
@@ -51,7 +55,7 @@ module.exports = {
       lg: '18px',
       icon: '22px',
       'icon-inner': '19px',
-      full: '9999px'
+      full: '9999px',
     },
     colors: {
       white: '#fff',
@@ -71,7 +75,7 @@ module.exports = {
         700: '#414141',
         800: '#2b2b2b',
         850: '#1a1a1a',
-        900: '#111111'
+        900: '#111111',
       },
       red: {
         50: '#fffafa',
@@ -83,7 +87,7 @@ module.exports = {
         600: '#d92038',
         700: '#c11027',
         800: '#8f0718',
-        900: '#341418'
+        900: '#341418',
       },
       orange: {
         50: '#fff8f3',
@@ -95,7 +99,7 @@ module.exports = {
         600: '#b83a05',
         700: '#962d00',
         800: '#672002',
-        900: '#3c1403'
+        900: '#3c1403',
       },
       yellow: {
         50: '#fffbe4',
@@ -107,7 +111,7 @@ module.exports = {
         600: '#7d5903',
         700: '#5c4716',
         800: '#41320c',
-        900: '#281e03'
+        900: '#281e03',
       },
       green: {
         50: '#effff3',
@@ -119,7 +123,7 @@ module.exports = {
         600: '#13862e',
         700: '#19652a',
         800: '#10481d',
-        900: '#0a2b13'
+        900: '#0a2b13',
       },
       blue: {
         50: '#f3fbff',
@@ -131,7 +135,7 @@ module.exports = {
         600: '#0b6ec5',
         700: '#144eb6',
         800: '#0e3682',
-        900: '#08204e'
+        900: '#08204e',
       },
       purple: {
         50: '#f9f8ff',
@@ -143,8 +147,8 @@ module.exports = {
         600: '#5e49af',
         700: '#4b3990',
         800: '#3e1f75',
-        900: '#27124a'
-      }
+        900: '#27124a',
+      },
     },
     fontFamily: {
       sans: [
@@ -159,7 +163,7 @@ module.exports = {
         'Fira Sans',
         'Droid Sans',
         'Helvetica Neue',
-        'sans-serif'
+        'sans-serif',
       ],
       mono: [
         'Roboto Mono',
@@ -169,100 +173,100 @@ module.exports = {
         'Menlo',
         'Consolas',
         'Liberation Mono',
-        'monospace'
-      ]
+        'monospace',
+      ],
     },
     fontSize: {
       '3xs': [
         '8px',
         {
           letterSpacing: '0.024em',
-          lineHeight: 1.4
-        }
+          lineHeight: 1.4,
+        },
       ],
       '2xs': [
         '10px',
         {
           letterSpacing: '0.01em',
-          lineHeight: 1.4
-        }
+          lineHeight: 1.4,
+        },
       ],
       xs: [
         '12px',
         {
           letterSpacing: '0',
-          lineHeight: 1.4
-        }
+          lineHeight: 1.4,
+        },
       ],
       sm: [
         '14px',
         {
           letterSpacing: '-0.006em',
-          lineHeight: 1.5
-        }
+          lineHeight: 1.5,
+        },
       ],
       base: [
         '16px',
         {
           letterSpacing: '-0.011em',
-          lineHeight: 1.5
-        }
+          lineHeight: 1.5,
+        },
       ],
       lg: [
         '18px',
         {
           letterSpacing: '-0.014em',
-          lineHeight: 1.4
-        }
+          lineHeight: 1.4,
+        },
       ],
       xl: [
         '20px',
         {
           letterSpacing: '-0.017em',
-          lineHeight: 1.4
-        }
+          lineHeight: 1.4,
+        },
       ],
       '2xl': [
         '24px',
         {
           letterSpacing: '-0.019em',
-          lineHeight: 1.25
-        }
+          lineHeight: 1.25,
+        },
       ],
       '3xl': [
         '28px',
         {
           letterSpacing: '-0.021em',
-          lineHeight: 1.4
-        }
+          lineHeight: 1.4,
+        },
       ],
       '4xl': [
         '32px',
         {
           letterSpacing: '-0.021em',
-          lineHeight: 1.4
-        }
+          lineHeight: 1.4,
+        },
       ],
       '5xl': [
         '48px',
         {
           letterSpacing: '-0.022em',
-          lineHeight: 1
-        }
+          lineHeight: 1,
+        },
       ],
       '6xl': [
         '64px',
         {
           letterSpacing: '-0.022em',
-          lineHeight: 1
-        }
-      ]
+          lineHeight: 1,
+        },
+      ],
     },
     fontWeight: {
       normal: 400,
       medium: 500,
       semibold: 600,
-      bold: 700
+      bold: 700,
     },
     opacity: opacity(),
     spacing: spacing(),
@@ -276,7 +280,7 @@ module.exports = {
       green: 'var(--text-green)',
       blue: 'var(--text-blue)',
       purple: 'var(--text-purple)',
-      transparent: 'transparent'
+      transparent: 'transparent',
     },
     zIndex: zIndex(),
     extend: {
@@ -295,18 +299,18 @@ module.exports = {
       backgroundColor: {
         primary: 'var(--bg-primary)',
         secondary: 'var(--bg-secondary)',
-        tertiary: 'var(--bg-tertiary)'
+        tertiary: 'var(--bg-tertiary)',
       },
       borderColor: {
         DEFAULT: 'var(--border-primary)',
         primary: 'var(--border-primary)',
-        secondary: 'var(--border-secondary)'
+        secondary: 'var(--border-secondary)',
       },
       boxShadow: {
         'inner-px': 'inset 0 1px 0 var(--tw-shadow-color)',
         'inner-xs': 'inset 0 1px 1px var(--tw-shadow-color)',
         'inner-lg':
-          'inset 0 -50px 50px var(--tw-shadow-color), 0 30px 30px var(--tw-shadow-color), 0 15px 15px var(--tw-shadow-color), 0 10px 8px var(--tw-shadow-color), 0 4px 4px var(--tw-shadow-color), 0 2px 2px var(--tw-shadow-color)'
+          'inset 0 -50px 50px var(--tw-shadow-color), 0 30px 30px var(--tw-shadow-color), 0 15px 15px var(--tw-shadow-color), 0 10px 8px var(--tw-shadow-color), 0 4px 4px var(--tw-shadow-color), 0 2px 2px var(--tw-shadow-color)',
       },
       container: {
         center: true,
@@ -315,21 +319,21 @@ module.exports = {
           sm: 'var(--spacing-3)',
           md: 'var(--spacing-4)',
           lg: 'var(--spacing-5)',
-          xl: 'var(--spacing-6)'
-        }
+          xl: 'var(--spacing-6)',
+        },
       },
       lineHeight: {
-        normal: 'normal'
+        normal: 'normal',
       },
       transitionDuration: {
-        DEFAULT: '200ms'
-      }
-    }
+        DEFAULT: '200ms',
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
     function ({ addVariant }) {
-      addVariant('initial', 'html :where(&)')
-    }
-  ]
-}
+      addVariant('initial', 'html :where(&)');
+    },
+  ],
+};
